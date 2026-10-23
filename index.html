@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нууцхан бэлэг 🎀</title>
+
+  <style>
+    .couple-sticker {
+      width: 50px;
+      max-width: 20%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 15px auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #bd4f83;
+      background: linear-gradient(135deg, #ffe3ef, #fff6fa, #ffd5e8);
+      overflow-x: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      padding: 30px 22px;
+      border: 3px solid white;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .82);
+      box-shadow: 0 12px 40px #e98bb644;
+    }
+
+    .bow {
+      font-size: 66px;
+      animation: bounce 2s infinite;
+    }
+
+    h1 {
+      font-size: 27px;
+      line-height: 1.4;
+      margin: 12px 0;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 18px 0 12px;
+      border: 2px solid #ffc0da;
+      border-radius: 18px;
+      text-align: center;
+      font-size: 18px;
+      outline: none;
+      background: #fffafd;
+    }
+
+    input:focus {
+      border-color: #ed75aa;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 14px 22px;
+      margin: 7px 3px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform .2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .primary {
+      color: white;
+      background: linear-gradient(135deg, #ff83b5, #eb5998);
+      box-shadow: 0 5px 14px #ef80ad55;
+    }
+
+    .secondary {
+      color: #d34f8c;
+      background: white;
+      border: 2px solid #ffc4dc;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .letter {
+      margin-top: 22px;
+      padding: 20px 15px;
+      border: 2px dashed #f5a9ca;
+      border-radius: 22px;
+      background: #fff4f9;
+      animation: appear .8s ease;
+    }
+
+    .letter p {
+      white-space: pre-line;
+    }
+
+    #message {
+      min-height: 24px;
+      font-size: 14px;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      pointer-events: none;
+      animation: floatUp 5s linear forwards;
+      z-index: 2;
+    }
+
+    .footer {
+      margin-top: 22px;
+      font-size: 13px;
+      color: #d58aaa;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-3deg);
+      }
+
+      50% {
+        transform: translateY(-8px) rotate(3deg);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="bow">
+      <img src="images/couple-sticker.png" alt="Our photo" class="kitty-sticker">
+    </div>
+
+    <h1>Чамд зориулсан нууц бэлэг ♡</h1>
+    <p>Энэ жижигхэн ертөнц зөвхөн чамд зориулагдсан.<br>
+      Нууц кодоо оруулаад үзээрэй, хайрт минь! 💌</p>
+
+    <form id="codeForm">
+      <input id="secretCode" type="password" placeholder="♡ Нууц код ♡" autocomplete="off" required>
+      <button class="primary" type="submit">
+        Нээх 💗
+      </button>
+    </form>
+
+    <p id="message" role="status"></p>
+
+    <section id="letter" class="letter hidden">
+      <div style="font-size:48px">💌🌷💞</div>
+      <h2>Миний хайртай хүнд ♡</h2>
+
+      <p id="loveText">Чамтай учирсан минь миний хамгийн гоё
+        дурсамжуудын нэг.
+
+        Чи миний өдрийг гэрэлтүүлж,
+        намайг инээмсэглүүлдэг жүү.
+
+        Чамдаа үргэлж баярлаж явдаг жүү.
+        Өнөөдөр ч, маргааш ч, үргэлж. 💗
+        Мундаг хүлээгээд өөрийгөө бодоод байж байгаарай да юу 😘
+        Даарж болохгүй жүү ханиад хүрвээ жа юу💗
+        Чамдаа жөндөө хайртай жүү үнжий 😘❤️</p>
+      <button id="giftButton" class="primary" type="button">
+        Миний бэлгийг нээ 🎁
+      </button>
+
+      <div id="gift" class="hidden">
+        <div style="font-size:68px">🎁💖✨</div>
+        <h2>Чи миний хамгийн гоё бэлэг! 🥹</h2>
+        <p>Чамтайгаа хамт олон гоё дурсамж бүтээмээр байна.</p>
+        <p>Чамдаа хайртай жүү үнжий 😘❤️ ♡</p>
+      </div>
+    </section>
+
+    <div class="footer">Made with love, just for you ♡</div>
+  </main>
+
+  <!-- Email мэдэгдлийн form -->
+  <form id="emailForm" action="https://formsubmit.co/tumbash81@gmail.com" method="POST" target="emailFrame"
+    class="hidden">
+    <input type="hidden" name="_subject" value="💗 Тэр чиний бэлгийг нээлээ!">
+    <input type="hidden" name="message" value="Найз охин чинь website дээрх нууц бэлгийг нээлээ! 💌">
+    <input type="hidden" name="_template" value="table">
+  </form>
+
+  <iframe name="emailFrame" title="Email илгээх" class="hidden"></iframe>
+
+  <script>
+    const SECRET_CODE = "0829";
+
+    const codeForm = document.getElementById("codeForm");
+    const codeInput = document.getElementById("secretCode");
+    const message = document.getElementById("message");
+    const letter = document.getElementById("letter");
+    const giftButton = document.getElementById("giftButton");
+    const gift = document.getElementById("gift");
+
+    codeForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (codeInput.value.trim() === SECRET_CODE) {
+        letter.classList.remove("hidden");
+        message.textContent = "Зөв код байна, миний хайраа! 💗";
+        codeForm.classList.add("hidden");
+        codeInput.value = "";
+        makeHearts();
+      } else {
+        message.textContent = "Өө, код буруу байна. Дахиад оролдоорой ♡";
+        codeInput.value = "";
+        codeInput.focus();
+      }
+    });
+
+    giftButton.addEventListener("click", function () {
+      gift.classList.remove("hidden");
+      giftButton.disabled = true;
+      giftButton.textContent = "Бэлэг нээгдлээ 💖";
+
+      makeHearts();
+
+      const emailForm = document.getElementById("emailForm");
+      emailForm.submit();
+    });
+
+    function makeHearts() {
+      const symbols = ["💗", "💕", "💖", "🎀", "✨"];
+
+      for (let i = 0; i < 18; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.textContent = symbols[
+          Math.floor(Math.random() * symbols.length)
+        ];
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDelay = Math.random() * 2 + "s";
+        heart.style.fontSize = (18 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 7000);
+      }
+    }
+  </script>
+</body>
+
+</html>
